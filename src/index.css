@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 40 20% 99%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 40 20% 99%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 215 60% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 15% 93%;
+    --secondary-foreground: 220 30% 15%;
+
+    --muted: 40 10% 93%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 215 40% 93%;
+    --accent-foreground: 215 60% 28%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 215 60% 32%;
+
+    --radius: 0.5rem;
+
+    --hero-bg: 40 20% 95%;
+    --section-alt: 40 15% 94%;
+    --quote-bg: 215 60% 32%;
+    --quote-foreground: 0 0% 100%;
+    --badge-bg: 215 40% 93%;
+    --badge-foreground: 215 60% 28%;
+    --stat-icon: 215 60% 32%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 40 10% 90%;
+    --card: 220 25% 11%;
+    --card-foreground: 40 10% 90%;
+    --popover: 220 25% 11%;
+    --popover-foreground: 40 10% 90%;
+    --primary: 215 50% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 40 10% 90%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 215 35% 18%;
+    --accent-foreground: 215 50% 70%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 215 50% 55%;
+    --hero-bg: 220 25% 10%;
+    --section-alt: 220 20% 9%;
+    --quote-bg: 215 50% 40%;
+    --quote-foreground: 0 0% 100%;
+    --badge-bg: 215 35% 18%;
+    --badge-foreground: 215 50% 70%;
+    --stat-icon: 215 50% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Crimson Pro', serif;
+  }
+  
+  .font-body {
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(215 60% 22%));
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
